@@ -1,0 +1,135 @@
+:root {
+  --muted:#e6e6e6;
+  --accent:#cb5d4a;
+  --bg:#fafafa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+}
+
+.app {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  height: 100vh;
+}
+
+.editor {
+  width: 360px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  overflow: auto;
+}
+
+.preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-shell {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(8,10,14,0.06);
+}
+
+.viewer {
+  flex: 1;
+  min-height: 360px;
+  background: linear-gradient(#f7f7f7,#fff);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-panel { width: 360px; }
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 13px;
+  color: #333;
+  width: 120px;
+}
+
+.select,
+input[type=text],
+input[type=number] {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+
+.slider { width: 100%; }
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.colors {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.button-sample {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.small-muted { font-size: 12px; color: #666; }
+
+@media (max-width: 900px) {
+  .app { flex-direction: column; height: auto; padding: 12px; }
+  .editor { width: 100%; }
+  .side-panel { width: 100%; }
+  .card-shell { flex-direction: column; }
+}
+.toolbar-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.toolbar-btn:hover {
+  background: var(--muted);
+  transform: scale(1.05);
+}
+
