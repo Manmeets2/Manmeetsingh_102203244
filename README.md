@@ -1,4 +1,4 @@
-# 🎨 Dynamic UI Editor
+# 🎨 Manmeetsingh_102203244 Dynamic UI Editor
 
 A fully interactive React-based UI customization tool that allows users to dynamically modify design components — including typography, buttons, color palettes, gallery layout, and product previews — all in real-time.
 
